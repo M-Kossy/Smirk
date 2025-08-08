@@ -1,0 +1,76 @@
+[gd_scene load_steps=9 format=3 uid="uid://b2fq23k15wcg"]
+
+[ext_resource type="Script" uid="uid://biapet04h5ule" path="res://Scripts/Level9_Canon/level_9_canon.gd" id="1_u5vue"]
+[ext_resource type="Script" uid="uid://byfvrfrey18wl" path="res://Scripts/Level9_Canon/ball.gd" id="3_sa1v8"]
+[ext_resource type="Texture2D" uid="uid://bmlm21vb44kjs" path="res://Assets/Sprites/OTHER/etoile_laby.png" id="4_d8vb5"]
+[ext_resource type="PackedScene" uid="uid://bm1d3n0ykhsgk" path="res://Scenes/Level9_canon/Cible.tscn" id="4_knr3t"]
+[ext_resource type="Texture2D" uid="uid://c1stnmd4feecq" path="res://Assets/Sprites/CANOON/canon.png" id="5_1e6bq"]
+[ext_resource type="FontFile" uid="uid://dn8i2b1qkd2c2" path="res://Assets/font/Starborn.ttf" id="6_1e6bq"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u5vue"]
+radius = 30.0666
+
+[sub_resource type="Theme" id="Theme_yv7p6"]
+default_font = ExtResource("6_1e6bq")
+default_font_size = 128
+
+[node name="Level9Canon" type="Node2D"]
+script = ExtResource("1_u5vue")
+
+[node name="Cibles" type="Node2D" parent="."]
+
+[node name="Cible6" parent="Cibles" instance=ExtResource("4_knr3t")]
+position = Vector2(461, -383)
+
+[node name="Cible" parent="Cibles" instance=ExtResource("4_knr3t")]
+position = Vector2(532, -1)
+
+[node name="Cible2" parent="Cibles" instance=ExtResource("4_knr3t")]
+position = Vector2(8, 1)
+
+[node name="Cible4" parent="Cibles" instance=ExtResource("4_knr3t")]
+position = Vector2(-438, -408)
+
+[node name="Cible5" parent="Cibles" instance=ExtResource("4_knr3t")]
+position = Vector2(9, -520)
+
+[node name="Cible3" parent="Cibles" instance=ExtResource("4_knr3t")]
+position = Vector2(-587, -9)
+
+[node name="ball" type="CharacterBody2D" parent="."]
+position = Vector2(144, 426)
+collision_layer = 4
+collision_mask = 0
+script = ExtResource("3_sa1v8")
+metadata/_edit_group_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="ball"]
+scale = Vector2(1.01953, 1.01953)
+texture = ExtResource("4_d8vb5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ball"]
+shape = SubResource("CircleShape2D_u5vue")
+
+[node name="canon" type="Sprite2D" parent="."]
+position = Vector2(36, 449)
+scale = Vector2(0.511719, 0.511719)
+texture = ExtResource("5_1e6bq")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -1255.0
+offset_top = -1037.0
+offset_right = 1291.0
+offset_bottom = -775.0
+theme = SubResource("Theme_yv7p6")
+theme_override_colors/font_shadow_color = Color(0.913725, 0.866667, 0.733333, 1)
+theme_override_constants/shadow_outline_size = 100
+bbcode_enabled = true
+text = "[shake rate=10.0 level=30
+ connected=1]2 .HAVE A BAD AIM[/shake]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

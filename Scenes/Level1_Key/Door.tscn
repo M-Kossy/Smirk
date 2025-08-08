@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://r1wvuwsd66mn"]
+
+[ext_resource type="Script" uid="uid://caol2mvjhs8t2" path="res://Scripts/Level1/Door.gd" id="1_mw28t"]
+[ext_resource type="Texture2D" uid="uid://cgcvlkric687q" path="res://Assets/Sprites/LOCKS/etoile.png" id="2_jiimv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mw28t"]
+size = Vector2(88, 108)
+
+[node name="Door" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_mw28t")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_jiimv")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -6)
+shape = SubResource("RectangleShape2D_mw28t")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

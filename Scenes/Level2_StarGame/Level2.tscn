@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://qiffovqf748j"]
+
+[ext_resource type="Script" uid="uid://dbn8ekkpikev0" path="res://Scripts/Level2_StarGame/level_2.gd" id="1_mybro"]
+[ext_resource type="PackedScene" uid="uid://c8ifkwe2su56t" path="res://Scenes/Level2_StarGame/Door_lvl2.tscn" id="1_u4276"]
+[ext_resource type="PackedScene" uid="uid://di68hhwnbcpps" path="res://Scenes/Level2_StarGame/Key_star_lvl2.tscn" id="3_yvtnl"]
+[ext_resource type="Script" uid="uid://bdnla5mwlxep3" path="res://Scripts/Level2_StarGame/key_spawner.gd" id="5_b0nod"]
+[ext_resource type="FontFile" uid="uid://dn8i2b1qkd2c2" path="res://Assets/font/Starborn.ttf" id="5_qfemp"]
+
+[sub_resource type="Theme" id="Theme_fxcvy"]
+default_font = ExtResource("5_qfemp")
+default_font_size = 128
+
+[node name="Level2" type="Node2D"]
+script = ExtResource("1_mybro")
+
+[node name="DoorLvl2" parent="." instance=ExtResource("1_u4276")]
+position = Vector2(-2, -503)
+
+[node name="key_list" type="Node2D" parent="."]
+position = Vector2(-990, -122)
+script = ExtResource("5_b0nod")
+number_of_objects = 80
+spawn_area = Rect2(-300, 0, 2700, 700)
+
+[node name="KeyStarLvl2" parent="key_list" instance=ExtResource("3_yvtnl")]
+position = Vector2(226, 134)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -1156.0
+offset_top = -1029.0
+offset_right = 1390.0
+offset_bottom = -767.0
+theme = SubResource("Theme_fxcvy")
+theme_override_colors/font_shadow_color = Color(0.913725, 0.866667, 0.733333, 1)
+theme_override_constants/shadow_outline_size = 100
+bbcode_enabled = true
+text = "[shake rate=10.0 level=30
+ connected=1]3. DON'T FIND THE STAR[/shake]"
+horizontal_alignment = 1
+vertical_alignment = 1

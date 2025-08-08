@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://omsfmruu6cyg"]
+
+[ext_resource type="Script" uid="uid://d1bdox3r46yqj" path="res://Scripts/Level8_touch/mouse.gd" id="1_pfp03"]
+[ext_resource type="Texture2D" uid="uid://bol87ohe0c7d0" path="res://icon.svg" id="2_mn3mx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1qc0"]
+size = Vector2(112, 113)
+
+[node name="Mouse" type="Area2D" groups=["Pickable"]]
+script = ExtResource("1_pfp03")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_mn3mx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1.5)
+shape = SubResource("RectangleShape2D_h1qc0")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

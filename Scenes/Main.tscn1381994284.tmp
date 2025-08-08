@@ -1,0 +1,146 @@
+[gd_scene load_steps=27 format=3 uid="uid://dpyp2jpnic74o"]
+
+[ext_resource type="Script" uid="uid://cr3kd6dcccauy" path="res://Scripts/Main.gd" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://c46hdip1nwatu" path="res://Scenes/Level1_Key/Level1.tscn" id="2_idj7w"]
+[ext_resource type="PackedScene" uid="uid://ftdlayukopuu" path="res://Scenes/Level5/Level5.tscn" id="2_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://qiffovqf748j" path="res://Scenes/Level2_StarGame/Level2.tscn" id="2_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://dvrcxg1grfsx8" path="res://Scenes/Level3_Maze/Level3.tscn" id="3_kln2b"]
+[ext_resource type="Texture2D" uid="uid://ciryf3t2ab4la" path="res://Assets/Sprites/SMIRK/Happys/cat_Mic_Off.png" id="5_frkhe"]
+[ext_resource type="Texture2D" uid="uid://ba8wcxr0p3ec" path="res://Assets/Sprites/SMIRK/Happys/Etoile.png" id="6_1p5hy"]
+[ext_resource type="Texture2D" uid="uid://cyvgesacyvobt" path="res://Assets/Sprites/MAIN/Plqtequ.png" id="6_v1gob"]
+[ext_resource type="Texture2D" uid="uid://km3emxag21jo" path="res://Assets/Sprites/SMIRK/Happys/hihi.png" id="7_h1m7h"]
+[ext_resource type="Texture2D" uid="uid://258tw0mp4bpu" path="res://Assets/Sprites/MAIN/cadre.png" id="7_jw32o"]
+[ext_resource type="Texture2D" uid="uid://ktcgwumug50r" path="res://Assets/Sprites/MAIN/timer.png" id="8_50glp"]
+[ext_resource type="Texture2D" uid="uid://c486mfoiqm1hj" path="res://Assets/Sprites/SMIRK/Happys/hmmm.png" id="8_erwvk"]
+[ext_resource type="Texture2D" uid="uid://8cs2iv23gdv6" path="res://Assets/Sprites/SMIRK/Happys/SMIRK_Mic_off.png" id="9_2w5on"]
+[ext_resource type="Texture2D" uid="uid://yn2k0x37obes" path="res://Assets/Sprites/SMIRK/Sad/gasp.png" id="10_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://cof6p6kfnoqmx" path="res://Assets/Sprites/SMIRK/Sad/gnh.png" id="11_hwpts"]
+[ext_resource type="Texture2D" uid="uid://bq5nyy38xq5lo" path="res://Assets/Sprites/SMIRK/Sad/guh.png" id="12_jyqft"]
+[ext_resource type="Texture2D" uid="uid://ibub27bj1ndd" path="res://Assets/Sprites/SMIRK/Sad/jojojoy.png" id="13_3tgeq"]
+[ext_resource type="Texture2D" uid="uid://tkflbue52j02" path="res://Assets/Sprites/SMIRK/Sad/NUH_UH.png" id="14_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://b7o2xe3qwewfd" path="res://Assets/Sprites/SMIRK/Sad/QUESTIONMARK.png" id="15_aht7i"]
+[ext_resource type="Texture2D" uid="uid://csah4ixgboadg" path="res://Assets/Sprites/SMIRK/Sad/screamer.png" id="16_5jffn"]
+[ext_resource type="Texture2D" uid="uid://bf801p6p2l8vb" path="res://Assets/Sprites/SMIRK/Sad/tf.png" id="17_kpo4j"]
+[ext_resource type="FontFile" uid="uid://bqsnu7opl8mqa" path="res://Assets/font/DS-DIGIB.TTF" id="22_hwpts"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
+atlas = ExtResource("6_v1gob")
+region = Rect2(0, 0, 1920, 1080)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_50glp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw32o")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_346fj"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_frkhe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_1p5hy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_h1m7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_erwvk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_2w5on")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_fq0cl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_hwpts")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_jyqft")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_3tgeq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_c4ay3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_aht7i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_5jffn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_kpo4j")
+}],
+"loop": true,
+"name": &"Frame",
+"speed": 5.0
+}]
+
+[sub_resource type="LabelSettings" id="LabelSettings_jyqft"]
+font = ExtResource("22_hwpts")
+font_size = 200
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rgh2o")
+
+[node name="Table" type="AnimatedSprite2D" parent="."]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_50glp")
+animation = &"Idle"
+
+[node name="Time_left" type="Sprite2D" parent="."]
+position = Vector2(-985, -719)
+scale = Vector2(2, 2)
+texture = ExtResource("8_50glp")
+
+[node name="Cadre" type="Sprite2D" parent="."]
+position = Vector2(1545, -703)
+texture = ExtResource("7_jw32o")
+
+[node name="Smirk" type="AnimatedSprite2D" parent="."]
+position = Vector2(1555, -703)
+sprite_frames = SubResource("SpriteFrames_346fj")
+animation = &"Frame"
+
+[node name="Lbl_time_left" type="Label" parent="."]
+offset_left = -1205.0
+offset_top = -825.0
+offset_right = -407.0
+offset_bottom = -420.0
+label_settings = SubResource("LabelSettings_jyqft")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Level1" parent="." instance=ExtResource("2_idj7w")]
+visible = false
+position = Vector2(-1619, -894)
+
+[node name="Level2" parent="." instance=ExtResource("2_rgh2o")]
+visible = false
+
+[node name="Level3" parent="." instance=ExtResource("3_kln2b")]
+visible = false
+
+[node name="Level5" parent="." instance=ExtResource("2_pbw6q")]
+visible = false
+
+[node name="End_timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[node name="Smirk_timer" type="Timer" parent="."]
+wait_time = 4.0
+autostart = true
+
+[connection signal="timeout" from="End_timer" to="." method="_on_end_timer_timeout"]
+[connection signal="timeout" from="Smirk_timer" to="." method="_on_smirk_timer_timeout"]

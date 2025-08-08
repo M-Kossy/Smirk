@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://tpqt0d0lw6yw"
+path="res://.godot/imported/SFX game glass beakv3.wav-1cfd70c6a06dddaac6117771697245da.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/SFX game glass beakv3.wav"
+dest_files=["res://.godot/imported/SFX game glass beakv3.wav-1cfd70c6a06dddaac6117771697245da.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

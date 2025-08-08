@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://hhnk2d23u5lk"
+path="res://.godot/imported/SFX smirk Touch the wall.wav-c9f3dff3678368d7d2f6df5c7656fe2e.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/SFX smirk Touch the wall.wav"
+dest_files=["res://.godot/imported/SFX smirk Touch the wall.wav-c9f3dff3678368d7d2f6df5c7656fe2e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

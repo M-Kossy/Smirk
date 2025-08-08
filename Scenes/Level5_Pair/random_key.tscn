@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://8wjnif0oi2kq"]
+
+[ext_resource type="Script" uid="uid://bjco053hkr5uv" path="res://Scripts/Level5/random_key.gd" id="1_j2frc"]
+[ext_resource type="Texture2D" uid="uid://bxd88wi1xnkff" path="res://Assets/Sprites/KEYS/Random_key_sprite_sheets.png" id="2_l0opp"]
+[ext_resource type="Script" uid="uid://cmqtbyu8vdb3b" path="res://Scripts/Level5/random_key_sprite.gd" id="3_0ptpr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fh46q"]
+radius = 46.0
+height = 246.0
+
+[node name="Random_key" type="CharacterBody2D" groups=["Pickable"]]
+input_pickable = true
+script = ExtResource("1_j2frc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_fh46q")
+
+[node name="Random_key_sprite" type="Sprite2D" parent="."]
+texture = ExtResource("2_l0opp")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 84)
+script = ExtResource("3_0ptpr")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

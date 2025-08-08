@@ -1,0 +1,57 @@
+[gd_scene load_steps=6 format=3 uid="uid://ftdlayukopuu"]
+
+[ext_resource type="Script" uid="uid://d3mpiskasqith" path="res://Scripts/Level5/level_5.gd" id="1_q2ird"]
+[ext_resource type="PackedScene" uid="uid://8wjnif0oi2kq" path="res://Scenes/Level5_Pair/random_key.tscn" id="2_u80jw"]
+[ext_resource type="PackedScene" uid="uid://b6x3i5jape815" path="res://Scenes/Level5_Pair/random_lock.tscn" id="3_m24gs"]
+[ext_resource type="FontFile" uid="uid://dn8i2b1qkd2c2" path="res://Assets/font/Starborn.ttf" id="4_7nkko"]
+
+[sub_resource type="Theme" id="Theme_o462a"]
+default_font = ExtResource("4_7nkko")
+default_font_size = 128
+
+[node name="Level5" type="Node2D"]
+script = ExtResource("1_q2ird")
+
+[node name="Random_lock" parent="." instance=ExtResource("3_m24gs")]
+position = Vector2(0, -583)
+
+[node name="Random_lock2" parent="." instance=ExtResource("3_m24gs")]
+position = Vector2(-698, -201)
+
+[node name="Random_lock3" parent="." instance=ExtResource("3_m24gs")]
+position = Vector2(712, -214)
+
+[node name="Random_lock4" parent="." instance=ExtResource("3_m24gs")]
+position = Vector2(-408, 521)
+
+[node name="Random_lock5" parent="." instance=ExtResource("3_m24gs")]
+position = Vector2(433, 524)
+
+[node name="Random_key" parent="." instance=ExtResource("2_u80jw")]
+position = Vector2(255, 340)
+
+[node name="Random_key2" parent="." instance=ExtResource("2_u80jw")]
+position = Vector2(375, -168)
+
+[node name="Random_key3" parent="." instance=ExtResource("2_u80jw")]
+position = Vector2(-260, 330)
+
+[node name="Random_key4" parent="." instance=ExtResource("2_u80jw")]
+position = Vector2(-380, -123)
+
+[node name="Random_key5" parent="." instance=ExtResource("2_u80jw")]
+position = Vector2(1, -364)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -1156.0
+offset_top = -1029.0
+offset_right = 1390.0
+offset_bottom = -767.0
+theme = SubResource("Theme_o462a")
+theme_override_colors/font_shadow_color = Color(0.913725, 0.866667, 0.733333, 1)
+theme_override_constants/shadow_outline_size = 100
+bbcode_enabled = true
+text = "[shake rate=10.0 level=30
+ connected=1]5. DON'T MATCH THE KEYS[/shake]"
+horizontal_alignment = 1
+vertical_alignment = 1

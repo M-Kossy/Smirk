@@ -1,0 +1,42 @@
+[gd_scene load_steps=7 format=3 uid="uid://c55kn6d18akfh"]
+
+[ext_resource type="Script" uid="uid://d33tbnbbue6k3" path="res://Scripts/hole_and_form.gd" id="1_a02vn"]
+[ext_resource type="Script" uid="uid://blrxypryg2x3r" path="res://Scripts/form.gd" id="2_s1n33"]
+[ext_resource type="Texture2D" uid="uid://bxd88wi1xnkff" path="res://Assets/Sprites/Random_key_sprite_sheets.png" id="3_k1me8"]
+[ext_resource type="Script" uid="uid://buqst11ta6k1n" path="res://Scenes/sprite_2d.gd" id="4_n3ave"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_10533"]
+radius = 45.0
+height = 222.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_a02vn"]
+radius = 42.5793
+
+[node name="Hole_and_form" type="Node2D"]
+script = ExtResource("1_a02vn")
+
+[node name="Form" type="CharacterBody2D" parent="." groups=["Pickable"]]
+input_pickable = true
+script = ExtResource("2_s1n33")
+
+[node name="Random_sprite_key" type="Sprite2D" parent="Form"]
+texture = ExtResource("3_k1me8")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 84)
+script = ExtResource("4_n3ave")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Form"]
+position = Vector2(0, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_10533")
+
+[node name="Hole" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole"]
+position = Vector2(-227, 0)
+shape = SubResource("CircleShape2D_a02vn")
+
+[node name="Sprite2D" type="Sprite2D" parent="Hole"]
+
+[connection signal="input_event" from="Form" to="Form" method="_on_input_event"]
+[connection signal="body_entered" from="Hole" to="." method="_on_hole_body_entered"]

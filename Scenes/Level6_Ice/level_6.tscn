@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://g0qnjjxkcey6"]
+
+[ext_resource type="Script" uid="uid://b0h4idtmf16ne" path="res://Scripts/Level6/level_6.gd" id="1_oy3hr"]
+[ext_resource type="PackedScene" uid="uid://cbpayvmebrkt6" path="res://Scenes/Level6_Ice/ice.tscn" id="1_r6yuf"]
+[ext_resource type="PackedScene" uid="uid://ddail0rx7555p" path="res://Scenes/Level6_Ice/star_button.tscn" id="2_8gbae"]
+[ext_resource type="FontFile" uid="uid://dn8i2b1qkd2c2" path="res://Assets/font/Starborn.ttf" id="4_t0x4s"]
+
+[sub_resource type="Theme" id="Theme_6w6ec"]
+default_font = ExtResource("4_t0x4s")
+default_font_size = 100
+
+[node name="Level6" type="Node2D"]
+script = ExtResource("1_oy3hr")
+
+[node name="Star_button" parent="." instance=ExtResource("2_8gbae")]
+position = Vector2(9, -1)
+
+[node name="Ice" parent="." instance=ExtResource("1_r6yuf")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -899.0
+offset_top = -1055.0
+offset_right = 909.0
+offset_bottom = -770.0
+theme = SubResource("Theme_6w6ec")
+theme_override_colors/font_shadow_color = Color(0.913725, 0.866667, 0.733333, 1)
+theme_override_constants/shadow_outline_size = 100
+bbcode_enabled = true
+text = "[shake rate=10.0 level=30
+ connected=1]6 .DO NOT BREAK THIS GLASS [/shake]"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="button_clicked" from="Star_button" to="." method="_on_star_button_button_clicked"]

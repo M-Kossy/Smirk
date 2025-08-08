@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c6vfj7kou2hdj"
+path="res://.godot/imported/SFX smirk Have a bad aim.wav-04eced1da5c2cef839f6e9984aaac118.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/SFX smirk Have a bad aim.wav"
+dest_files=["res://.godot/imported/SFX smirk Have a bad aim.wav-04eced1da5c2cef839f6e9984aaac118.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,261 @@
+[gd_scene load_steps=49 format=3 uid="uid://cjxkdy74xnbqi"]
+
+[ext_resource type="Script" uid="uid://bc3nx2nrpdr0g" path="res://Scripts/global/sfx_manager.gd" id="1_wyj0a"]
+[ext_resource type="Script" uid="uid://8fb15poo6ife" path="res://Scripts/SoundEffectSettings.gd" id="2_sk25j"]
+[ext_resource type="AudioStream" uid="uid://cf8lh5h2tnoch" path="res://Assets/SFX/SFX Public Happy Game win.wav" id="3_o41q8"]
+[ext_resource type="AudioStream" uid="uid://cs3qm257qsmuj" path="res://Assets/SFX/SFX Public Sad Game Over.wav" id="4_3ddug"]
+[ext_resource type="AudioStream" uid="uid://0gy377pu2nnc" path="res://Assets/SFX/SFX smirk Do not break this glass.wav" id="5_oin0p"]
+[ext_resource type="AudioStream" uid="uid://bfhp1oeea1ojo" path="res://Assets/SFX/SFX smirk Do not find the star key.wav" id="6_e430b"]
+[ext_resource type="AudioStream" uid="uid://cc30vek4y4nkx" path="res://Assets/SFX/SFX smirk Do not make pair.wav" id="7_6by5y"]
+[ext_resource type="AudioStream" uid="uid://c5blswufbm8ba" path="res://Assets/SFX/SFX smirk Do not touch them.wav" id="8_vc1vm"]
+[ext_resource type="AudioStream" uid="uid://c6vfj7kou2hdj" path="res://Assets/SFX/SFX smirk Have a bad aim.wav" id="9_eqikq"]
+[ext_resource type="AudioStream" uid="uid://hhnk2d23u5lk" path="res://Assets/SFX/SFX smirk Touch the wall.wav" id="10_b5qsr"]
+[ext_resource type="AudioStream" uid="uid://cldona4bfdj5u" path="res://Assets/SFX/SFX game Drop key.wav" id="11_6by5y"]
+[ext_resource type="AudioStream" uid="uid://dhfynd1cx7s67" path="res://Assets/SFX/SFX game Key open door.wav" id="12_vc1vm"]
+[ext_resource type="AudioStream" uid="uid://b83h2kdf5rmk8" path="res://Assets/SFX/SFX game shoot aimv2.wav" id="13_y7ef8"]
+[ext_resource type="AudioStream" uid="uid://tnj000eflk3i" path="res://Assets/SFX/SFX game target hit.wav" id="14_b5qsr"]
+[ext_resource type="AudioStream" uid="uid://tpqt0d0lw6yw" path="res://Assets/SFX/SFX game glass beakv3.wav" id="15_ueh1j"]
+[ext_resource type="AudioStream" uid="uid://dy1eh67ly8x2i" path="res://Assets/SFX/SFX game hammer hit.wav" id="16_ueh1j"]
+[ext_resource type="AudioStream" uid="uid://bhgh76betv78k" path="res://Assets/SFX/SFX game labyrinth fail.wav" id="17_y7ef8"]
+[ext_resource type="AudioStream" uid="uid://bhhj4evkryfka" path="res://Assets/SFX/SFX game key pick up.wav" id="18_ueh1j"]
+[ext_resource type="AudioStream" uid="uid://3ha157l10grk" path="res://Assets/SFX/SFX game curtain.wav" id="19_h2gyn"]
+[ext_resource type="AudioStream" uid="uid://cocbrfj8tidd8" path="res://Assets/SFX/SFX game Button.wav" id="20_veuhk"]
+[ext_resource type="AudioStream" uid="uid://c1f5bi0t2se6v" path="res://Assets/SFX/SFX smirk The key is lava.wav" id="21_ueh1j"]
+[ext_resource type="AudioStream" uid="uid://dfhsj3m3ka8da" path="res://Assets/SFX/SFX smirk Stay in the light.wav" id="22_h2gyn"]
+[ext_resource type="AudioStream" uid="uid://cvymlcstip0mj" path="res://Assets/SFX/SFX smirk Do it again.wav" id="23_veuhk"]
+[ext_resource type="AudioStream" uid="uid://cwjik2qb4cw1d" path="res://Assets/SFX/SFX smirk too easy.wav" id="24_i5327"]
+[ext_resource type="AudioStream" uid="uid://cxkvhetejgpuo" path="res://Assets/SFX/SFX smirk Welcome to the show.wav" id="25_b2lv1"]
+
+[sub_resource type="Resource" id="Resource_y7ef8"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 0
+sound_effect = ExtResource("3_o41q8")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_ueh1j"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 1
+sound_effect = ExtResource("4_3ddug")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_h2gyn"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 2
+sound_effect = ExtResource("5_oin0p")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_veuhk"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 3
+sound_effect = ExtResource("6_e430b")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_i5327"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 4
+sound_effect = ExtResource("7_6by5y")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_b2lv1"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 5
+sound_effect = ExtResource("8_vc1vm")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_sv8r3"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 6
+sound_effect = ExtResource("9_eqikq")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_k646a"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 7
+sound_effect = ExtResource("10_b5qsr")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_0fufn"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 8
+sound_effect = ExtResource("11_6by5y")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_qkiuc"]
+script = ExtResource("2_sk25j")
+limit = 2
+type = 9
+sound_effect = ExtResource("12_vc1vm")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_q170a"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 10
+sound_effect = ExtResource("13_y7ef8")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_3hhsb"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 11
+sound_effect = ExtResource("14_b5qsr")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_grw0t"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 12
+sound_effect = ExtResource("15_ueh1j")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_ldlp7"]
+script = ExtResource("2_sk25j")
+limit = 2
+type = 13
+sound_effect = ExtResource("16_ueh1j")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_6by5y"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 14
+sound_effect = ExtResource("17_y7ef8")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_ruvmj"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 15
+sound_effect = ExtResource("18_ueh1j")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_6nvjb"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 16
+sound_effect = ExtResource("19_h2gyn")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_kv7mp"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 17
+sound_effect = ExtResource("20_veuhk")
+volume = 0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_d85j6"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 18
+sound_effect = ExtResource("21_ueh1j")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_d86lt"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 19
+sound_effect = ExtResource("22_h2gyn")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_nhokk"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 20
+sound_effect = ExtResource("23_veuhk")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_xofys"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 21
+sound_effect = ExtResource("24_i5327")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[sub_resource type="Resource" id="Resource_7b4ow"]
+script = ExtResource("2_sk25j")
+limit = 5
+type = 22
+sound_effect = ExtResource("25_b2lv1")
+volume = 1
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"
+
+[node name="SfxManager" type="Node2D"]
+script = ExtResource("1_wyj0a")
+sound_effects_settings = Array[ExtResource("2_sk25j")]([SubResource("Resource_y7ef8"), SubResource("Resource_ueh1j"), SubResource("Resource_h2gyn"), SubResource("Resource_veuhk"), SubResource("Resource_i5327"), SubResource("Resource_b2lv1"), SubResource("Resource_sv8r3"), SubResource("Resource_k646a"), SubResource("Resource_0fufn"), SubResource("Resource_qkiuc"), SubResource("Resource_q170a"), SubResource("Resource_3hhsb"), SubResource("Resource_grw0t"), SubResource("Resource_ldlp7"), SubResource("Resource_6by5y"), SubResource("Resource_ruvmj"), SubResource("Resource_6nvjb"), SubResource("Resource_kv7mp"), SubResource("Resource_d85j6"), SubResource("Resource_d86lt"), SubResource("Resource_nhokk"), SubResource("Resource_xofys"), SubResource("Resource_7b4ow")])

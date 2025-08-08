@@ -1,0 +1,36 @@
+[gd_scene load_steps=7 format=3 uid="uid://dvrcxg1grfsx8"]
+
+[ext_resource type="PackedScene" uid="uid://26bu574o7qfq" path="res://Scenes/Level3_Maze/maze.tscn" id="1_7r4ff"]
+[ext_resource type="Script" uid="uid://c02eo4lweoldj" path="res://Scripts/Level3_Maze/level_3.gd" id="1_l3ibx"]
+[ext_resource type="PackedScene" uid="uid://cntg7y0ftmq16" path="res://Scenes/Level3_Maze/litteStar.tscn" id="2_e1qq3"]
+[ext_resource type="PackedScene" uid="uid://sg2ym51bws35" path="res://Scenes/Level3_Maze/maze_2.tscn" id="3_wbqeu"]
+[ext_resource type="FontFile" uid="uid://dn8i2b1qkd2c2" path="res://Assets/font/Starborn.ttf" id="4_v7oa6"]
+
+[sub_resource type="Theme" id="Theme_wbqeu"]
+default_font = ExtResource("4_v7oa6")
+default_font_size = 128
+
+[node name="Level3" type="Node2D"]
+script = ExtResource("1_l3ibx")
+
+[node name="Maze2" parent="." instance=ExtResource("3_wbqeu")]
+position = Vector2(-12, -47)
+
+[node name="Maze" parent="." instance=ExtResource("1_7r4ff")]
+
+[node name="LitteStar" parent="." instance=ExtResource("2_e1qq3")]
+position = Vector2(-417, 4)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_left = -1156.0
+offset_top = -1029.0
+offset_right = 1390.0
+offset_bottom = -767.0
+theme = SubResource("Theme_wbqeu")
+theme_override_colors/font_shadow_color = Color(0.913725, 0.866667, 0.733333, 1)
+theme_override_constants/shadow_outline_size = 100
+bbcode_enabled = true
+text = "[shake rate=10.0 level=30
+ connected=1]4. TOUCH THE WALL[/shake]"
+horizontal_alignment = 1
+vertical_alignment = 1

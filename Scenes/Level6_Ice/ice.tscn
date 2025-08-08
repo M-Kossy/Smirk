@@ -1,0 +1,118 @@
+[gd_scene load_steps=13 format=3 uid="uid://cbpayvmebrkt6"]
+
+[ext_resource type="Script" uid="uid://0kxioe6qvb2s" path="res://Scripts/Level6/ice.gd" id="1_fse5i"]
+[ext_resource type="Texture2D" uid="uid://dg4meuac6c8sg" path="res://Assets/Sprites/ICE/cube.png" id="2_kmtll"]
+[ext_resource type="Texture2D" uid="uid://gcjl5rxl0i4k" path="res://Assets/Sprites/ICE/couvercle_neuf.png" id="3_c4j0e"]
+[ext_resource type="Texture2D" uid="uid://ds85c3n1oxw1k" path="res://Assets/Sprites/ICE/HAUT_CUBE1.png" id="3_h55eh"]
+[ext_resource type="Texture2D" uid="uid://coaq2yy0yjojc" path="res://Assets/Sprites/ICE/haut_cube_2.png" id="4_c4j0e"]
+[ext_resource type="Texture2D" uid="uid://cp4by50otmwdg" path="res://Assets/Sprites/ICE/haut_cube_3.png" id="5_b85s1"]
+[ext_resource type="Texture2D" uid="uid://cxmbj172802qe" path="res://Assets/Sprites/ICE/haut_cube_4.png" id="6_j2fqx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uice2"]
+size = Vector2(484, 426)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kmtll"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c4j0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h55eh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_c4j0e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_b85s1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_j2fqx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="Animation" id="Animation_c4j0e"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(69, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_h55eh"]
+resource_name = "Shake"
+length = 0.07
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0333333, 0.0666667),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(69, 0), Vector2(-40, 0), Vector2(15, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_b85s1"]
+_data = {
+&"RESET": SubResource("Animation_c4j0e"),
+&"Shake": SubResource("Animation_h55eh")
+}
+
+[node name="Ice" type="Area2D" groups=["Ice"]]
+position = Vector2(69, 0)
+script = ExtResource("1_fse5i")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." groups=["Block"]]
+visible = false
+shape = SubResource("RectangleShape2D_uice2")
+
+[node name="Cube" type="Sprite2D" parent="."]
+position = Vector2(0, 6)
+texture = ExtResource("2_kmtll")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_kmtll")
+frame_progress = 0.542851
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(15, -35)
+emitting = false
+amount = 15
+lifetime = 2.5
+one_shot = true
+speed_scale = 8.0
+explosiveness = 0.45
+emission_shape = 2
+emission_sphere_radius = 128.0
+gravity = Vector2(0, 0)
+angular_velocity_min = 271.7
+angular_velocity_max = 393.96
+radial_accel_min = 100.0
+radial_accel_max = 100.0
+tangential_accel_min = 16.98
+tangential_accel_max = 16.98
+scale_amount_min = 5.0
+scale_amount_max = 15.0
+color = Color(0.592157, 0.760784, 0.796078, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_b85s1")
+}
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

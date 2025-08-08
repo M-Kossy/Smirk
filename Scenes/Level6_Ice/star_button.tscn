@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://ddail0rx7555p"]
+
+[ext_resource type="Texture2D" uid="uid://o5we3cjcf7x3" path="res://Assets/Sprites/Button/etoile.png" id="1_44u1k"]
+[ext_resource type="Script" uid="uid://bn4wbs7m4ixb1" path="res://Scripts/Level6/star_button.gd" id="1_e0rl2"]
+[ext_resource type="Texture2D" uid="uid://ctdexw517wgjp" path="res://Assets/Sprites/Button/etoile_push.png" id="2_e0rl2"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_52ffa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_44u1k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_e0rl2")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_38r4c"]
+radius = 95.0842
+
+[node name="Star_button" type="Area2D"]
+script = ExtResource("1_e0rl2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_52ffa")
+frame_progress = 0.827905
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, -34)
+shape = SubResource("CircleShape2D_38r4c")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

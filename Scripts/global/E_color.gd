@@ -1,0 +1,3 @@
+extends Node
+
+enum ENUM_COLOR {DIAMOND, CLUB, HEART, SPADE, STAR}

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://0gy377pu2nnc"
+path="res://.godot/imported/SFX smirk Do not break this glass.wav-38dca94b08b7ead7bae0a40afbc90624.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/SFX smirk Do not break this glass.wav"
+dest_files=["res://.godot/imported/SFX smirk Do not break this glass.wav-38dca94b08b7ead7bae0a40afbc90624.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

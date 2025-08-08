@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://cntg7y0ftmq16"]
+
+[ext_resource type="Script" uid="uid://djp61vfd5dffv" path="res://Scripts/Level3_Maze/litte_star.gd" id="1_kwxyk"]
+[ext_resource type="Texture2D" uid="uid://bmlm21vb44kjs" path="res://Assets/Sprites/OTHER/etoile_laby.png" id="2_kwxyk"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_kwxyk"]
+radius = 30.0
+
+[node name="LitteStar" type="CharacterBody2D" groups=["Pickable"]]
+collision_layer = 4
+collision_mask = 0
+input_pickable = true
+script = ExtResource("1_kwxyk")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.999996, -3.8147e-06)
+scale = Vector2(1.285, 1.285)
+texture = ExtResource("2_kwxyk")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1, 6)
+shape = SubResource("CircleShape2D_kwxyk")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

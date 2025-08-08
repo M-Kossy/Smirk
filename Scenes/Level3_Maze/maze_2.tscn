@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://sg2ym51bws35"]
+
+[ext_resource type="Script" uid="uid://cqm1aqq2gdle4" path="res://Scripts/Level3_Maze/maze.gd" id="1_h31oa"]
+[ext_resource type="Texture2D" uid="uid://dlgs5xvkuaqwo" path="res://Assets/Sprites/OTHER/labyrinthe_decor_2.png" id="2_h31oa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7re1d"]
+size = Vector2(115.656, 100.25)
+
+[node name="Maze" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_h31oa")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(12, 50.5001)
+scale = Vector2(6.5272, 6.47083)
+texture = ExtResource("2_h31oa")
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+position = Vector2(-12.4728, 99.7824)
+scale = Vector2(4.48677, 4.48677)
+polygon = PackedVector2Array(-52.9394, 22.782, -52.9394, -44.7499, -120.694, -44.7499, -121.363, 68.9176, 18.8271, 68.6947, 19.05, 114.385, 39.3318, 114.83, 40.0004, 47.5214, -6.35807, 47.7443, -6.58095, -44.527, -28.4229, -44.7499, -27.7543, 47.5214, -99.9666, 47.2985, -99.298, -24.0223, -74.3357, -24.0223, -74.1128, 22.5591)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+position = Vector2(-4, 32)
+scale = Vector2(2.1182, 2.1182)
+polygon = PackedVector2Array(-358.795, -346.521, 366.821, -353.13, 369.653, -17.9398, 136.909, -18.4119, 136.909, -61.845, 328.581, -62.7892, 328.581, -113.776, 232.745, -116.608, 231.801, -160.042, 328.581, -160.042, 328.581, -212.445, 177.981, -212.445, 178.925, -116.608, 36.3516, -116.136, 33.519, -258.238, 80.7289, -257.294, 80.7289, -159.569, 136.909, -159.097, 135.492, -257.294, 328.581, -258.238, 328.581, -310.641, -16.0514, -310.641, -17.9398, -115.192, -159.569, -115.664, -160.042, -160.042, -66.5659, -162.402, -66.5659, -309.697, -114.72, -309.697, -113.776, -213.861, -260.126, -213.861, -260.599, -258.71, -165.707, -259.654, -166.179, -308.281, -310.641, -309.697, -310.641, -160.986, -218.582, -157.681, -217.165, -114.72, -313.946, -115.192, -313.946, 229.912, -219.998, 229.912, -218.11, 275.706, -313.474, 275.234, -315.834, 329.053, -65.1497, 328.581, -65.6217, 275.234, -160.986, 276.178, -161.93, 229.912, -18.884, 230.856, -19.3561, 329.525, 334.718, 330.469, 331.886, 178.925, 278.538, 178.453, 279.955, 277.122, 233.689, 277.122, 232.745, 177.509, 179.87, 177.037, 180.342, 275.234, 134.076, 276.178, 134.548, 80.2568, 36.3516, 79.3126, 35.4074, -61.3729, 79.3126, -61.3729, 81.6731, 35.4074, 179.398, 37.7679, 179.87, 131.716, 331.886, 133.604, 329.997, 78.8405, 235.577, 78.3684, 233.689, 38.24, 373.43, 38.24, 374.847, 367.765, -361.156, 374.374)
+
+[node name="End" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End"]
+position = Vector2(791, 51)
+shape = SubResource("RectangleShape2D_7re1d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="End" to="." method="_on_end"]

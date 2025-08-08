@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cfud6gkm71mq7"
+path="res://.godot/imported/Welcome to the show v3.ogg-3e841267bf269c64700beb96288329dd.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Music/Welcome to the show v3.ogg"
+dest_files=["res://.godot/imported/Welcome to the show v3.ogg-3e841267bf269c64700beb96288329dd.oggvorbisstr"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=122.0
+beat_count=0
+bar_beats=4

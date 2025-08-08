@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://c46hdip1nwatu"]
+
+[ext_resource type="Script" uid="uid://xh3vnkowlfdr" path="res://Scripts/Level1.gd" id="1_vxb1s"]
+[ext_resource type="PackedScene" uid="uid://bsmicu34rinik" path="res://Scenes/Key.tscn" id="2_vxb1s"]
+[ext_resource type="PackedScene" uid="uid://r1wvuwsd66mn" path="res://Scenes/Level1_Key/Door.tscn" id="3_teab5"]
+
+[node name="Level1" type="Node2D"]
+script = ExtResource("1_vxb1s")
+
+[node name="Door" parent="." instance=ExtResource("3_teab5")]
+position = Vector2(1063, 512)
+
+[node name="Key" parent="." instance=ExtResource("2_vxb1s")]
+position = Vector2(708, 517)
+
+[connection signal="door_open" from="Door" to="." method="_on_door_open"]

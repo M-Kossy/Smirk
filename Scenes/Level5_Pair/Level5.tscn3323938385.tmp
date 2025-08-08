@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://ftdlayukopuu"]
+
+[ext_resource type="Script" uid="uid://d3mpiskasqith" path="res://Scripts/level_5.gd" id="1_q2ird"]
+[ext_resource type="PackedScene" uid="uid://8wjnif0oi2kq" path="res://Scenes/random_key.tscn" id="2_u80jw"]
+[ext_resource type="PackedScene" uid="uid://b6x3i5jape815" path="res://Scenes/Level5/random_lock.tscn" id="3_m24gs"]
+
+[node name="Level5" type="Node2D"]
+script = ExtResource("1_q2ird")
+
+[node name="Random_lock" parent="." instance=ExtResource("3_m24gs")]
+position = Vector2(-243, -53)
+
+[node name="Random_key" parent="." instance=ExtResource("2_u80jw")]
+position = Vector2(180, -42)
+
+[connection signal="door_open" from="Random_lock" to="." method="_on_random_lock_door_open"]

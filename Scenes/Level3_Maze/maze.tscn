@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://26bu574o7qfq"]
+
+[ext_resource type="Script" uid="uid://cqm1aqq2gdle4" path="res://Scripts/Level3_Maze/maze.gd" id="1_7re1d"]
+[ext_resource type="Texture2D" uid="uid://c4k1j808avttb" path="res://Assets/Sprites/OTHER/labyrinnthe_feuille.png" id="2_7re1d"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7re1d"]
+size = Vector2(115.656, 100.25)
+
+[node name="Maze" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+script = ExtResource("1_7re1d")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(5.2, 5.2)
+texture = ExtResource("2_7re1d")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(2.1182, 2.1182)
+polygon = PackedVector2Array(-159.097, -63.2613, 83.0894, -63.2613, 83.5615, 131.716, 371.07, 131.716, 372, 374, -372, 374, -372, -374, 372, -374, 372.014, 82.1452, 135.964, 81.6731, 136.437, -62.7892, 182.23, -64.2055, 182.702, 32.1027, 233.689, 31.6306, 233.217, -114.72, -61.3729, -115.664, -62.3171, -162.874, 134.076, -162.402, 134.548, -260.599, 280.899, -260.599, 280.899, -212.917, 189.312, -211.972, 189.312, -164.29, 280.899, -162.402, 281.371, 31.6306, 330.469, 32.5748, 330.941, -311.585, 85.4499, -311.585, 84.0336, -212.445, -160.986, -212.445, -160.514, -261.543, 37.7679, -259.654, 38.24, -310.641, -308.281, -310.641, -306.864, -162.874, -257.766, -163.346, -258.71, -261.071, -209.612, -261.071, -209.612, -162.402, -111.887, -162.402, -112.36, -114.248, -211.5, -115.192, -211.5, 277.122, -257.766, 278.066, -259.182, -113.776, -307.809, -113.776, -308.281, 328.109, 231.801, 328.109, 232.273, 229.912, 280.899, 230.384, 279.483, 328.109, 329.525, 328.109, 331.413, 180.342, 84.5057, 180.342, 84.5057, 229.912, 182.702, 230.384, 182.702, 278.538, 36.3516, 278.066, 35.4074, 180.814, -110.471, 181.758, -111.887, 229.912, -13.6909, 230.384, -13.6909, 278.066, -160.514, 279.01, -160.986, 131.716, 35.4074, 132.188, 35.8795, -16.0514, -112.36, -16.5235, -113.776, 33.519, -14.6351, 34.4632, -15.1072, 80.7289, -159.569, 81.201)
+
+[node name="End" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="End"]
+position = Vector2(803, 227)
+shape = SubResource("RectangleShape2D_7re1d")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="End" to="." method="_on_end"]

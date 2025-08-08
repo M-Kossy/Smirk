@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://cf8lh5h2tnoch"
+path="res://.godot/imported/SFX Public Happy Game win.wav-f37df2fa5f8e4241972273315dc47476.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/SFX Public Happy Game win.wav"
+dest_files=["res://.godot/imported/SFX Public Happy Game win.wav-f37df2fa5f8e4241972273315dc47476.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

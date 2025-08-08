@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6x3i5jape815"]
+
+[ext_resource type="Script" uid="uid://c0risgj845nwo" path="res://Scripts/random_lock.gd" id="1_vd0xi"]
+[ext_resource type="Texture2D" uid="uid://dlxeglgxqjk73" path="res://Assets/Sprites/LOCKS/Random_locks_sheets.png" id="2_2jbnw"]
+[ext_resource type="Script" uid="uid://tmn3fa54lgxl" path="res://Scripts/lock_random_sprite.gd" id="3_04acq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2ehr5"]
+size = Vector2(75, 128.688)
+
+[node name="Random_lock" type="Area2D" groups=["Lock"]]
+script = ExtResource("1_vd0xi")
+
+[node name="Lock_random_sprite" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_2jbnw")
+region_enabled = true
+region_rect = Rect2(0, 0, 512, 512)
+script = ExtResource("3_04acq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2.5, -1.34375)
+shape = SubResource("RectangleShape2D_2ehr5")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

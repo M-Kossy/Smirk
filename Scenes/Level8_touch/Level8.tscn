@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://c54dlu6u2n3qf"]
+
+[ext_resource type="Script" uid="uid://c4nundyexnhgi" path="res://Scripts/Level8_touch/little_mouses.gd" id="1_exgw4"]
+[ext_resource type="Script" uid="uid://mdr4x82k8evo" path="res://Scripts/Level8_touch/level8_touch.gd" id="1_q3fj5"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w45hy"]
+a = Vector2(0, 1080)
+b = Vector2(0, -1)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_exgw4"]
+a = Vector2(-1920, -8)
+b = Vector2(0, -8)
+
+[node name="Level8" type="Node2D"]
+script = ExtResource("1_q3fj5")
+
+[node name="Bordure" type="Node2D" parent="."]
+
+[node name="Left" type="Area2D" parent="Bordure"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordure/Left"]
+shape = SubResource("SegmentShape2D_w45hy")
+
+[node name="Right" type="Area2D" parent="Bordure"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordure/Right"]
+position = Vector2(1920, 1)
+shape = SubResource("SegmentShape2D_w45hy")
+
+[node name="Up" type="Area2D" parent="Bordure"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordure/Up"]
+position = Vector2(1920, 8)
+shape = SubResource("SegmentShape2D_exgw4")
+
+[node name="Down" type="Area2D" parent="Bordure"]
+input_pickable = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bordure/Down"]
+position = Vector2(1920, 1088)
+shape = SubResource("SegmentShape2D_exgw4")
+
+[node name="little_mouses" type="Node2D" parent="."]
+script = ExtResource("1_exgw4")
+spawn_area = Rect2(0, 0, 1000, 600)
+speed_min = 100
+speed_max = 900

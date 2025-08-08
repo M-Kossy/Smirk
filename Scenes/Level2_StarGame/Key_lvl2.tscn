@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=3 uid="uid://8dic7hjtd30u"]
+
+[ext_resource type="Script" uid="uid://cdqhqga55i5rm" path="res://Scripts/Level2_StarGame/key_lvl_2.gd" id="1_668kt"]
+[ext_resource type="Texture2D" uid="uid://bxd88wi1xnkff" path="res://Assets/Sprites/KEYS/Random_key_sprite_sheets.png" id="1_cohr0"]
+[ext_resource type="Shader" uid="uid://btjl7gh2e60ei" path="res://Shaders/outline.gdshader" id="2_qy64x"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_4jc61"]
+shader = ExtResource("2_qy64x")
+shader_parameter/line_color = Color(0.301297, 0.242123, 0.0428971, 1)
+shader_parameter/line_thickness = 4.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qy64x"]
+radius = 49.0
+height = 282.0
+
+[node name="KeyLvl2" type="CharacterBody2D" groups=["Pickable"]]
+collision_layer = 4
+collision_mask = 0
+input_pickable = true
+script = ExtResource("1_668kt")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+material = SubResource("ShaderMaterial_4jc61")
+texture = ExtResource("1_cohr0")
+region_enabled = true
+region_rect = Rect2(0, 0, 256, 84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, 2)
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_qy64x")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

@@ -1,0 +1,28 @@
+[gd_scene load_steps=6 format=3 uid="uid://dpyp2jpnic74o"]
+
+[ext_resource type="Script" uid="uid://cr3kd6dcccauy" path="res://Scripts/Main.gd" id="1_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://c46hdip1nwatu" path="res://Scenes/Level1_Key/Level1.tscn" id="2_idj7w"]
+[ext_resource type="PackedScene" uid="uid://ftdlayukopuu" path="res://Scenes/Level5/Level5.tscn" id="2_pbw6q"]
+[ext_resource type="PackedScene" uid="uid://qiffovqf748j" path="res://Scenes/Level2_StarGame/Level2.tscn" id="2_rgh2o"]
+[ext_resource type="PackedScene" uid="uid://dvrcxg1grfsx8" path="res://Scenes/Level3_Maze/Level3.tscn" id="3_kln2b"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_rgh2o")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Level1" parent="." instance=ExtResource("2_idj7w")]
+position = Vector2(-1619, -894)
+
+[node name="Level2" parent="." instance=ExtResource("2_rgh2o")]
+
+[node name="Level3" parent="." instance=ExtResource("3_kln2b")]
+
+[node name="Level5" parent="." instance=ExtResource("2_pbw6q")]
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+one_shot = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

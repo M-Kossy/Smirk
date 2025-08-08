@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bm1d3n0ykhsgk"]
+
+[ext_resource type="Script" uid="uid://bltqs54u6hhj7" path="res://Scripts/Level9_Canon/cible.gd" id="1_u2s5s"]
+[ext_resource type="Texture2D" uid="uid://ixdofv154w1a" path="res://Assets/Sprites/CANOON/cible.png" id="2_u2s5s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u2s5s"]
+size = Vector2(115, 116)
+
+[node name="Cible" type="Area2D"]
+collision_layer = 0
+collision_mask = 4
+input_pickable = false
+script = ExtResource("1_u2s5s")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-6, 5)
+scale = Vector2(0.489167, 0.489167)
+texture = ExtResource("2_u2s5s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_u2s5s")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SoundEffectSettings" load_steps=3 format=3 uid="uid://bedj5xohyeifs"]
+
+[ext_resource type="Script" uid="uid://8fb15poo6ife" path="res://Scripts/SoundEffectSettings.gd" id="1_do0jd"]
+
+[sub_resource type="AudioStreamWAV" id="AudioStreamWAV_do0jd"]
+
+[resource]
+script = ExtResource("1_do0jd")
+limit = 5
+type = 1
+sound_effect = SubResource("AudioStreamWAV_do0jd")
+volume = 0
+pitch_scale = 1.0
+pitch_randomness = 0.0
+metadata/_custom_type_script = "uid://8fb15poo6ife"

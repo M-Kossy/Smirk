@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://c40ockgar8p33"]
+
+[ext_resource type="Script" uid="uid://hbrigkbckr7y" path="res://Scripts/global/music_mgr.gd" id="1_8k05p"]
+[ext_resource type="AudioStream" uid="uid://bykds1pqty3p7" path="res://Assets/Music/Main menu with audience.ogg" id="2_8k05p"]
+[ext_resource type="AudioStream" uid="uid://1wdocck1a5g5" path="res://Assets/Music/NO More Time.ogg" id="3_k7ls3"]
+[ext_resource type="AudioStream" uid="uid://cfud6gkm71mq7" path="res://Assets/Music/Welcome to the show v3.ogg" id="4_256dw"]
+
+[sub_resource type="AudioStreamInteractive" id="AudioStreamInteractive_8w1g6"]
+clip_count = 3
+clip_0/name = &"MENU"
+clip_0/stream = ExtResource("2_8k05p")
+clip_0/auto_advance = 0
+clip_1/name = &"GAME_SPEED_UP"
+clip_1/stream = ExtResource("3_k7ls3")
+clip_1/auto_advance = 0
+clip_2/name = &"GAME"
+clip_2/stream = ExtResource("4_256dw")
+clip_2/auto_advance = 0
+
+[node name="MusicMgr" type="Node"]
+script = ExtResource("1_8k05p")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = SubResource("AudioStreamInteractive_8w1g6")
