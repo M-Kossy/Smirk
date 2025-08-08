@@ -30,5 +30,11 @@ Thanks to your ancestors, you have learned and are capable of extraordinary feat
 
 And remember, **Don't trust Smirk.**
 
+## Licenses
+
+This project is licensed under the [GNU GPLv3 License](https://github.com/M-Kossy/Smirk/blob/main/LICENSE_GNU_GPLv3)
+
+The music and image is licensed under the [CC BY NC SA License](https://github.com/M-Kossy/Smirk/blob/main/LICENSE_CC_BY_NC_SA)
+
 ## Music
 [https://soundcloud.com/sviknesh](https://soundcloud.com/sviknesh)
